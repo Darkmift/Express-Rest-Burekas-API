@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Burekas Dispaly</title>
+    <style>
+        /****/
+        
+        @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .main_container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .main_div {
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Indie Flower', cursive;
+            border-radius: 12px;
+            height: auto;
+            box-shadow: 1px 1px 10px #898989;
+            color: #2c4d80;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+        
+        #title {
+            width: 100%;
+            text-align: center;
+            margin: 0.8rem;
+            padding: 6px;
+            font-style: italic;
+            font-size: 24px;
+            border-bottom: 1px dashed #8c8b8b;
+        }
+        
+        #result {
+            width: 100%;
+            border: 1px solid #8793a5;
+            border-radius: 5px;
+            padding: 7px;
+            margin: 10px;
+            color: #2c4d80;
+            text-align: left;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+        }
+        
+        ul {
+            counter-reset: section;
+            list-style: none;
+        }
+        
+        li::before {
+            color: #172d4e;
+            content: counter(section, hebrew)'.';
+            margin-right: 5px;
+            font-size: 25px;
+            font-weight: 100;
+        }
+        
+        li {
+            counter-increment: section;
+            font-size: 15px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="main_div">
+            <span id="title">Burekas List....Hmmm!!</span>
+            <div id="result">
+                <ul>
+                    {{BurekasHtmlLi}}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
