@@ -1,0 +1,22 @@
+{
+  "name": "expressburekas",
+  "version": "1.0.0",
+  "description": "Express.js rest api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darkmift/Express-Rest-Burekas-API.git"
+  },
+  "author": "Avi E. koenig\u001b[D\u001b[D\u001b[D\u001b[D\u001b[K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darkmift/Express-Rest-Burekas-API/issues"
+  },
+  "homepage": "https://github.com/Darkmift/Express-Rest-Burekas-API#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

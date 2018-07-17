@@ -1,0 +1,92 @@
+[{
+        "get all entries": {
+            "method": "GET",
+            "req": {
+                "url": "/burekas",
+                "contentype": ["application/json", "text/html"]
+            },
+            "res": {
+                "contentType": [{
+                    "application/json": {
+                        "id": "{id}",
+                        "type": ["egg", "mushrooms", "potato", "bulgarian_cheese"],
+                        "weight(Kg)": "integer",
+                        "Kcal": "integer"
+                    }
+                }, {
+                    "...": "..."
+                }]
+            }
+        }
+    }, {
+        "get one entry": {
+            "method": "GET",
+            "req": {
+                "url": "/burekas{id}",
+                "contentype": ["application/json", "text/html"]
+            },
+            "res": {
+                "id": "id",
+                "type": ["egg", "mushrooms", "potato", "bulgarian_cheese"],
+                "weight(Kg)": "integer",
+                "Kcal": "integer"
+            }
+        }
+    }, {
+        "create entry": {
+            "method": "POST",
+            "req": {
+                "url": "/burekas{id}",
+                "contentype": {
+                    "application/json": {
+                        "type": ["egg", "mushrooms", "potato", "bulgarian_cheese"],
+                        "weight": "integer",
+                        "Kcal": "integer"
+                    },
+                    "text/html": {
+                        "url": "/burekas?type=egg|mushrooms|potato|bulgarian_cheese&amp;weight=integer&amp;Kcal=integer"
+                    }
+                }
+            },
+            "res": {
+                "httpCode": 201,
+                "id": "new id of created burekas"
+            }
+        }
+    },
+    {
+        "update entry": {
+            "method": "PUT",
+            "req": {
+                "url": "/burekas{id}",
+                "contentype": {
+                    "application/json": {
+                        "type": ["egg", "mushrooms", "potato", "bulgarian_cheese"],
+                        "weight": "integer",
+                        "Kcal": "integer"
+                    },
+                    "text/html": {
+                        "url": "/burekas?type=egg|mushrooms|potato|bulgarian_cheese&amp;weight=integer&amp;Kcal=integer"
+                    }
+                }
+            },
+            "res": {
+                "httpCode": 204
+            }
+        }
+    },
+    {
+        "delete entry": {
+            "method": "DELETE",
+            "req": "/burekas/{id}",
+            "res": "httpCode(204)"
+        }
+    },
+    {
+        "check if entry exists": {
+            "method": "HEAD",
+            "req": "/burekas/{id}",
+            "res": "{true/false}"
+        }
+    }
+]

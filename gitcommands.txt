@@ -1,0 +1,3 @@
+//init with inspect
+nodemon --inspect app.js
+//go to chrome://inspect/ and launch console
